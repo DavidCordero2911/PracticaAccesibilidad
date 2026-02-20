@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Online - Compra laptops y smartphones de última generación</title>
+    <style>
+        :root {
+            --primary-orange: #d45500; 
+            --bg-light: #f9f9f9;
+            --text-main: #222;
+            --text-muted: #444;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            background-color: var(--bg-light);
+            color: var(--text-main);
+        }
+        
+        header {
+            background-color: var(--primary-orange);
+            padding: 20px;
+            color: white;
+        }
+        
+        nav {
+            background-color: #333;
+            padding: 10px;
+        }
+        
+        nav a {
+            color: #ffffff; 
+            text-decoration: underline;
+            padding: 10px;
+            margin-right: 10px;
+        }
+
+        nav a:hover, nav a:focus {
+            background-color: #555;
+            outline: 3px solid #ffcc00;
+        }
+        
+        main {
+            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        
+        .product {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border: 2px solid #ddd;
+        }
+        
+        .price {
+            color: #b00000; 
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: block;
+            margin: 10px 0;
+        }
+        
+        .btn {
+            background-color: #2d6a30; 
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+        
+        .btn:hover, .btn:focus {
+            background-color: #1e4620;
+            text-decoration: underline;
+        }
+
+        .footer {
+            background-color: #222;
+            color: #eee; 
+            padding: 30px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        
+        .footer a {
+            color: #00aaff;
+            text-decoration: underline;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>TiendaOnline.com</h1>
+        <p>¡Las mejores ofertas en tecnología!</p>
+    </header>
+    
+    <nav aria-label="Menú principal">
+        <a href="/">Inicio</a>
+        <a href="/productos">Productos</a>
+        <a href="/ofertas">Ofertas</a>
+        <a href="/contacto">Contacto</a>
+    </nav>
+    
+    <main>
+        <h2>Productos Destacados</h2>
+        
+        <section aria-label="Buscador de productos" style="margin-bottom: 30px;">
+            <label for="search-input">Buscar productos:</label>
+            <input type="text" id="search-input" placeholder="Ej. Laptop">
+            <button class="btn" aria-label="Ejecutar búsqueda">Buscar 🔍</button>
+        </section>
+        
+        <article class="product">
+            <img src="laptop.jpg" alt="Laptop SuperPro 3000 color plateado, vista frontal" width="200" height="150">
+            <h3>Laptop SuperPro 3000</h3>
+            <p>Procesador último modelo, 16GB RAM, 512GB SSD</p>
+            <span class="price" aria-label="Precio: 999 dólares">$999</span>
+            <button class="btn">Añadir Laptop SuperPro 3000 al carrito</button>
+        </article>
+
+        <section style="background: #fff; padding: 20px; border: 1px solid #ccc;">
+            <h3>Suscríbete a nuestro newsletter</h3>
+            <form>
+                <div style="margin-bottom: 10px;">
+                    <label for="nombre">Nombre:</label><br>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div style="margin-bottom: 10px;">
+                    <label for="email">Correo electrónico:</label><br>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <button type="submit" class="btn">Enviar suscripción</button>
+            </form>
+        </section>
+
+        <h3>Comparativa técnica</h3>
+        <table style="background: white; width: 100%; border-collapse: collapse;" border="1">
+            <thead>
+                <tr style="background: #eee;">
+                    <th scope="col">Producto</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Disponibilidad</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Laptop</td>
+                    <td>$999</td>
+                    <td>Disponible <span class="sr-only">(En stock)</span></td>
+                </tr>
+                <tr>
+                    <td>Smartphone</td>
+                    <td>$599</td>
+                    <td>Agotado <span class="sr-only">(No disponible actualmente)</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <a href="/ofertas" style="display: block; background: #d45500; color: white; padding: 20px; text-align: center; margin-top: 20px; text-decoration: none; font-weight: bold;">
+            ¡OFERTA ESPECIAL! Mira los descuentos de hoy
+        </a>
+    </main>
+    
+    <footer class="footer">
+        <p>© 2026 TiendaOnline.com - Todos los derechos reservados</p>
+        <nav aria-label="Enlaces legales">
+            <a href="#">Política de Privacidad</a> | 
+            <a href="#">Términos y Condiciones</a> | 
+            <a href="#">Contacto</a>
+        </nav>
+        <p>Última actualización: <time datetime="2026-02-16">16 de febrero de 2026</time></p>
+    </footer>
+
+</body>
+</html>
